@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*CSS style for the page*/
+    * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        font-family: 'josefin sans', sans-serif;
+    }
+
+    body {
+        background-color: rgb(207, 229, 238);
+        height: 100%;
+    }
+
+    .hero {
+        height: 15vh;
+        width: 100%;
+        background-color: rgb(5, 6, 87);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .logo {
+        color: rgb(5, 179, 248);
+        font-size: 33px;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        color: rgb(5, 179, 248);
+        transition: .3s;
+    }
+
+    button {
+        border: none;
+        background-color: rgb(5, 179, 248);
+        padding: 12px 30px;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        transition: .4s;
+        text-align: center;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    h1 {
+        text-align: center;
+        padding-top: 6%;
+        font-size: 60px;
+    }
+
+    u {
+        color: rgb(5, 179, 248);
+    }
+
+    .p {
+        text-align: center;
+        width: 22%;
+        height: 5%;
+        margin: 30px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parent {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 6%;
+    }
+
+    .parent img {
+        border-radius: 5%;
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h4 {
+        font-size: 45px;
+        font-weight: bolder;
+        margin: 1%;
+    }
+
+    h5 {
+        font-size: 30px;
+        margin: 1%;
+    }
+
+    h6 {
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        margin: 1%;
+        letter-spacing: 2px;
+        opacity: 70%;
+    }
+
+    input[type="submit"] {
+        width: 15%;
+        height: 1cm;
+        background-color: white;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(5, 179, 248);
+        border-radius: 30px;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 13.5px;
+        margin: 1%;
+        margin-top: 1%;
+    }
+
+    input[type="submit"]:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(5, 6, 87);
+        border: none;
+    }
+
+    b {
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+
+    .bold {
+        text-align: left;
+        font-family: sans-serif;
+        margin: 5%;
+        margin-top: 1%;
+        margin-left: 32%;
+    }
+
+    .little-images {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-top: -4%;
+        margin-left: 32%;
+    }
+
+    .little-images img {
+        border-radius: 22%;
+    }
+
+    .condition {
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(207, 229, 238);
+        margin: 5%;
+    }
+
+    small {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .child {
+        margin: 5%;
+    }
+
+    .my-own {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 1%;
+        box-sizing: border-box;
+    }
+
+    .my-own p {
+        margin: auto;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: 500;
+        box-sizing: border-box;
+        border: none;
+        background: white;
+        box-shadow: 1px 1px 1px rgb(5, 179, 248);
+    }
+    .my-own p:hover{
+        color: white;
+        background-color: rgb(5, 179, 248);
+    }
+
+    .my-own img {
+        transition: none;
+    }
+    .abc{
+        background-color: rgb(255, 255, 255);
+        height: 45vh;
+    }
+    .ss2c {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 2%;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(5, 179, 248);
+        width: 17%;
+    }
+    .ss2c:hover{
+        transform: scale(1.2);
+        background-color: white;
+    }
+
+    .ss2c  p{
+        margin: auto;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        border: none;
+    }
+    .ss2c  p:hover{
+        color: rgb(5, 179, 248);
+    }
+    .ss1c {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 1%;
+        box-sizing: border-box;
+    }
+    .abc h1{
+        font-size: 40px;
+        font-family: sans-serif;
+        margin-top: 10%;
+    }
+    span{
+        font-weight: lighter;
+        font-size: 17px;
+        font-family: sans-serif;
+        color: black;
+    }
+    .soup h1{
+        font-size: 40px;
+        font-family: sans-serif;
+    }
+    .soup p{
+        font-size: 20px;
+        font-family: sans-serif;
+        margin: 6%;
+        margin-top: 1%;
+    }
+    .spoon{
+        margin: 5%;
+        margin-top: -10%;
+    }
+    .jojo{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .number{
+        height: 60vh;
+        background-color: white;
+        width: 60vh;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid rgb(5, 6, 87);
+    }
+    .number h2{
+        box-sizing: border-box;
+        color: white;
+        background-color: rgb(5, 6, 87);
+        height: 10vh;
+        width: 60vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .number span{
+        color: white;
+        justify-content: center;
+        display: flex;
+        margin: 2%;
+    }
+    .number p{
+        margin: 5%;
+        font-family: sans-serif;
+        opacity: 80%;
+        letter-spacing: 1px;
+        line-height: 3rem;
+    }
+    .number u{
+        color: rgb(5, 6, 87);
+        line-height: 1rem;
+    }
+    .number button{
+        background-color: rgb(5, 6, 87);
+        text-align: center;
+        display: flex;
+        justify-content: left;
+        margin: 5%;
+    }
+    .number hr{
+        margin: 5%;
+    }
+    .laptop h1{
+        font-size: 40px;
+        font-family: sans-serif;
+        text-align: center;
+        margin: 3%;
+    }
+    .osase{
+        height: 90vh;
+        background-color: white;
+    }
+    .love{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+    .hate{
+        height: 40vh;
+        width: 60vh;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid rgb(5, 6, 87);
+    }
+    .hate h2{
+        box-sizing: border-box;
+        color: white;
+        background-color: rgb(5, 6, 87);
+        height: 9vh;
+        width: 60vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    .hate h3{
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .hate p{
+        margin: 5%;
+        font-family: sans-serif;
+        opacity: 80%;
+        letter-spacing: 1px;
+        line-height: 2rem;
+    }
+    .cord h1{
+        font-size: 40px;
+        font-family: sans-serif;
+        text-align: center;
+        margin: 3%;
+    }
+    .money{
+        background-color: white;
+        height: 70vh;
+    }
+    .edobor{
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        margin: 5%;
+    }
+    .new{
+        background-color: white;
+        height: 100vh;
+        width: 90vh;
+    }
+    .new h1{
+       box-sizing: border-box;
+       height: 15%;
+       width: 100%;
+       background-color: rgb(5, 6, 87);
+       font-size: 25px;
+       color: white;
+    }
+    input[type="text"]{
+        height: 6%;
+        background-color: rgb(242, 240, 240);
+        border: 1px solid rgb(5, 6, 87);
+        margin: 9%;
+    }
+    input[type="email"]{
+        height: 6%;
+        background-color: rgb(242, 240, 240);
+        border: 1px solid rgb(5, 6, 87);
+        margin: 9%;
+    }
+    textarea{
+        background-color: rgb(242, 240, 240);
+        border: 1px solid rgb(5, 6, 87);
+        margin: 3%;
+        height: 20%;
+        width: 40%;
+        margin-left: 10.5rem;
+    }
+    input[type="number"]{
+        height: 6%;
+        background-color: rgb(242, 240, 240);
+        border: 1px solid rgb(5, 6, 87);
+        margin: 10%;
+    }
+    .plug{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .plug button{
+        width: 15rem;
+        height: 2.5rem;
+        background-color: white;
+        border: 1px solid rgb(5, 179, 248);
+        color: black;
+        text-align: center;
+    }
+    
+</style>
+
+<body>
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo">LEADERSHIP EVENT</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Venue</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button type="button">Buy Tickets</button>
+        </nav>
+    </div>
+
+    <h1><u>LEADERSHIP</u> CONFERENCE <br> 2023</h1>
+    <div class="container">
+
+        <p class = "p">July 12 to 18 2022 | Times square, NY</p>
+    </div>
+    <h3>⬇️</h3>
+
+    <div class="parent">
+        <img src="C:\Users\User\Pictures\20230311_191152_0001.jpg" alt="" height="300" width="350">
+        <img src="C:\Users\User\Pictures\png_20230311_191620_0000.png" alt="" height="300" width="350">
+        <img src="C:\Users\User\Pictures\png_20230311_191953_0000.png" alt="" height="300" width="350">
+    </div>
+    <div class="child">
+
+        <h4>Our <u> Story</u></h4>
+
+        <h5>The importance of Leadership<br> Conference in 2023</h5>
+
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum voluptate alias, minima,<br> eligendi
+            deleniti ducimus itaque, corporis labore mollitia placeat ipsam obcaecati <br>similique optio soluta illo
+            illum recusandae quod accusantium!</h6>
+
+        <input type="submit" value="Meet Speakers">
+        <input type="submit" value="Check out Schedule">
+    </div>
+
+    <hr>
+    <div class="bold">
+        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate<br> obcaecati,quod dolore earum maxime quo
+            exercitationem veritatis<br> ipsum repellat maiores reprehenderit ut corrupti sed</b>
+    </div>
+    <hr>
+    <div class="little-images">
+        <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\happy-asian-man-standing-with-arms-crossed-grey-wall.jpg"
+            alt="" height="45" width="50">
+        <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university.jpg"
+            alt="" height="45" width="50">
+        <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\portrait-good-looking-brunette-young-asian-woman.jpg"
+            alt="" height="45" width="50">
+        <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\senior-man-white-sweater-eyeglasses.jpg"
+            alt="" height="45" width="50">
+        <small>120+ people are watching with us</small>
+    </div>
+    <div class="condition">
+        <h4>Our <u> Speakers</u></h4>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus<br> enim dolores ducimus omnis iure eum sit!
+            Delectus</h6>
+    </div>
+
+        <div class="texts">
+            <div class="my-own">
+                <div class="img1-card">
+                    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\happy-asian-man-standing-with-arms-crossed-grey-wall.jpg"
+                        alt="" height="150" width="150">
+                    <p>
+                        JOHN EDOBOR
+                        <br>
+                        CEO/Founder
+                    </p>
+                </div>
+                <div class="img2-card">
+                    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university.jpg"
+                        alt="" height="150" width="150">
+                    <p>
+                        SAMUEL
+                        <br>
+                        Event Planner
+                    </p>
+                </div>
+                <div class="img3-card">
+                    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\portrait-good-looking-brunette-young-asian-woman.jpg"
+                        alt="" height="150" width="150">
+                        <p>
+                        PETER
+                        <br>
+                        Start-up Coach
+                        </p>
+                </div>
+                <div class="img4-card">
+                    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+                        alt="" height="150" width="150">
+                        <p>
+                            VALENTINE
+                            <br>
+                            Event Manager
+                        </p>
+                </div>
+                <div class="img5-card">
+                    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\avatar\senior-man-white-sweater-eyeglasses.jpg"
+                        alt="" height="150" width="150">
+                        <p>
+                            EMMA
+                            <br>
+                            Top Level Speaker
+                        </p>
+                </div>
+            </div>
+        </div>
+    
+<hr>
+    <div class="abc">
+        <h1>Next <u>Schedule</u></h1>
+
+    <div class="ss1c">
+    <div class="ss2c">
+        <p>DAY ONE<span><br>July 12,2023</span></p>
+    </div>
+
+    <div class="ss2c">
+        <p>DAY TWO<span><br>July 13,2023</span></p>
+    </div>
+
+    <div class="ss2c">
+        <p>DAY THREE<span><br>July 14,2023</span></p>
+    </div>
+
+    <div class="ss2c">
+        <p>DAY FOUR<span><br>July 15,2023</span></p>
+    </div>
+    </div>
+    </div>
+    
+
+    <div class="soup">
+        <h1>Become an <u>Event Speaker?</u></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Impedit, hic at et quis dicta, laborum aliquam.</p>
+        <button class="spoon">Register Today</button>
+    </div>
+<hr>
+<div class="osase">
+    <div class="laptop">
+        <h1>Get Your <u>Tickets</u></h1>
+    </div>
+    <div class="jojo">
+        <div class="number">
+            <h2>Early Bird <span>$640</span></h2>
+            <p>All-Day Coffee + Snacks <br>After Party <br>24/7 Support</p>
+            <hr>
+            <u>Quick group meeting for multiple <br> teams</u>
+            <button>Buy Ticket</button>
+        </div>
+        <div class="number">
+            <h2>Gold <span>$840</span></h2>
+            <p>All-Day Coffee + Snacks <br>Group Meetings + After Party <br>24/7 Support + Instant Chats</p>
+            <hr>
+            <u>Quick group meeting for multiple <br> teams</u>
+            <button>Buy Ticket</button>
+        </div>
+        <div class="number">
+            <h2>Plantinum <span>$1240</span></h2>
+            <p>All-Day Coffee + Snacks <br>Private Meetings + After Party <br>24/7 Support + Instant Chats</p>
+            <hr>
+            <u>Quick group meeting for multiple <br> teams</u>
+            <button>Buy Ticket</button>
+        </div>
+    </div>
+</div>
+
+<div class="cord">
+    <h1>Here You go <u>venue</u></h1> 
+</div>
+<div class="love">
+    <img src="C:\Users\User\Documents\templatemo_575_leadership_event\templatemo_575_leadership_event\images\.trashed-1681419432-Screenshot_20230314-215607.png" alt="" height="300" width="400">
+    <div class="hate">
+        <h2>Times square</h2>
+        <h3>102 South. 7th Street, New York, NY.<br>10036,USA.</h3>
+        <p>Email: @company.com <br>Phone-no: 012-345-6789</p>
+    </div>
+</div>
+<hr>
+<div class="edobor">
+    <div class="new">
+        <h1>Please Say Hi</h1>
+
+        <input type="text" name="name" placeholder="Username" required>
+
+        <input type="email" name="Email" placeholder="Abc@gmail.com" required>
+
+        <input type="number" name="number" placeholder="012-012-0123" required>
+
+        <input type="text" name="text" placeholder="Subject/Topic" required>
+
+<div class="fan"></div>
+        <textarea id="message" placeholder="Message"></textarea>
+
+        <div class="plug">
+            <button>Submit</button>
+        </div>
+    </div>
+
+    
+</div>
+
+
+</div>
+
+</body>
+
+</html>
